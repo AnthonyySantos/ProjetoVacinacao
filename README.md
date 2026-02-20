@@ -1,7 +1,7 @@
 [ProjetoEstruturaDeDados.py](https://github.com/user-attachments/files/25430158/ProjetoEstruturaDeDados.py)
 
 [Uploading 
- # =========================
+# =========================
 # NÓ DA LISTA ENCADEADA
 # =========================
      class No:
