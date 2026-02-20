@@ -1,23 +1,23 @@
 [ProjetoEstruturaDeDados.py](https://github.com/user-attachments/files/25430158/ProjetoEstruturaDeDados.py)
 
 [Uploading 
-# =========================
+ # =========================
 # NÓ DA LISTA ENCADEADA
 # =========================
-class No:
-    def __init__(self, valor):
-        self.valor = valor
-        self.proximo = None
+     class No:
+        def __init__(self, valor):
+            self.valor = valor
+            self.proximo = None
 
 
 # =========================
 # FILA 
 # =========================
-class Fila:
-    def __init__(self):
-        self.inicio = None
-        self.fim = None
-        self.tamanho = 0
+    class Fila:
+        def __init__(self):
+            self.inicio = None
+            self.fim = None
+            self.tamanho = 0
 
     def enfileirar(self, valor):
         novo = No(valor)
@@ -52,10 +52,10 @@ class Fila:
 # =========================
 # PILHA 
 # =========================
-class Pilha:
-    def __init__(self):
-        self.topo = None
-        self.tamanho = 0
+    class Pilha:
+        def __init__(self):
+            self.topo = None
+            self.tamanho = 0
 
     def empilhar(self, valor):
         novo = No(valor)
@@ -79,35 +79,35 @@ class Pilha:
 # PROGRAMA PRINCIPAL
 # =========================
 
-fila = Fila()
-pilha_frascos = Pilha()
-vacinados = []  # Lista comum
+    fila = Fila()
+    pilha_frascos = Pilha()
+    vacinados = []  # Lista comum
 
 # 0 - Empilhar 3 frascos com 5 doses cada
-for i in range(3):
-    pilha_frascos.empilhar(5)
+    for i in range(3):
+        pilha_frascos.empilhar(5)
 
-dose_atual = 0
-frascos_usados = 0
-
-
-def doses_disponiveis():
-    total = 0
-    atual = pilha_frascos.topo
-    while atual:
-        total += atual.valor
-        atual = atual.proximo
-    return total
+    dose_atual = 0
+    frascos_usados = 0
 
 
-while True:
-    print("\n===== MENU =====")
-    print("1 - Adicionar pessoa")
-    print("2 - Pessoas da Fila")
-    print("3 - Doses disponíveis")
-    print("4 - Vacinar uma pessoa")
-    print("5 - Exibir total de pessoas vacinadas")
-    print("0 - Sair")
+    def doses_disponiveis():
+        total = 0
+        atual = pilha_frascos.topo
+        while atual:
+            total += atual.valor
+            atual = atual.proximo
+        return total
+
+
+    while True:
+        print("\n===== MENU =====")
+        print("1 - Adicionar pessoa")
+        print("2 - Pessoas da Fila")
+        print("3 - Doses disponíveis")
+        print("4 - Vacinar uma pessoa")
+        print("5 - Exibir total de pessoas vacinadas")
+        print("0 - Sair")
 
     opcao = input("Escolha: ")
 
